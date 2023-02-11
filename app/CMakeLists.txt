@@ -5,7 +5,7 @@ set(CMAKE_C_STANDARD 17)
 project(mesh2audio LANGUAGES C CXX OBJC)
 enable_language(OBJC)
 
-add_subdirectory("lib")
+add_subdirectory(lib)
 
 file(
     GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp
@@ -16,9 +16,12 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 
 include_directories(
     lib/implot
+    lib/glm
+    lib/tinyobjloader
+    lib/libigl
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE IMGUI)
+target_link_libraries(${PROJECT_NAME} PRIVATE IMGUI igl::core)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra)

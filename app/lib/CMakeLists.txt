@@ -33,3 +33,5 @@ target_include_directories(IMGUI
 find_package(OpenGL REQUIRED)
 target_link_libraries(IMGUI PUBLIC ${OPENGL_LIBRARIES})
 target_link_libraries(IMGUI PUBLIC SDL3 ${CMAKE_DL_LIBS})
+
+add_subdirectory(libigl)

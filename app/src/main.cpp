@@ -8,7 +8,14 @@
 #include <SDL.h>
 #include <SDL_opengl.h>
 
+#include "Mesh.h"
 #include "State.h"
+// #include <igl/opengl/glfw/Viewer.h>
+// #include <igl/opengl/glfw/imgui/ImGuiHelpers.h>
+// #include <igl/opengl/glfw/imgui/ImGuiMenu.h>
+// #include <igl/opengl/glfw/imgui/ImGuiPlugin.h>
+#include <igl/readOFF.h>
+
 
 // This example can also compile and run with Emscripten! See 'Makefile.emscripten' for details.
 #ifdef __EMSCRIPTEN__
@@ -100,6 +107,7 @@ int main(int, char **) {
     // IM_ASSERT(font != NULL);
 
     State s{}; // Main application state
+    LoadMesh();
     ImVec4 clear_color{0.45f, 0.55f, 0.6f, 1.f};
 
     // Main loop
@@ -173,6 +181,8 @@ int main(int, char **) {
             ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
             ImGui::End();
         }
+
+        DrawMesh();
 
         // Rendering
         ImGui::Render();

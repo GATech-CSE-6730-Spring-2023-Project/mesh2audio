@@ -8,3 +8,12 @@
 [submodule "app/lib/implot"]
 	path = app/lib/implot
 	url = git@github.com:epezent/implot.git
+[submodule "app/lib/libigl"]
+	path = app/lib/libigl
+	url = git@github.com:libigl/libigl.git
+[submodule "app/lib/glm"]
+	path = app/lib/glm
+	url = git@github.com:g-truc/glm.git
+[submodule "app/lib/tinyobjloader"]
+	path = app/lib/tinyobjloader
+	url = git@github.com:tinyobjloader/tinyobjloader.git
