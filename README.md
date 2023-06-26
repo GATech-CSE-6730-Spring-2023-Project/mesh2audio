@@ -25,6 +25,7 @@ The rest of the code is basically a GUI wrapper around Ben's axysimmetric FEM, a
 
 ```shell
 $ brew install glew llvm eigen
+$ brew link llvm --force
 ```
 
 #### Linux
