@@ -59,21 +59,21 @@ $ cd mesh2audio/app
   - Debug build (default): `./script/Build`
   - Release build: `./script/Build -r [--release]`
 
-Debug build is generated in the `./build` directory relative to project (repo) root.
-Release build is generated in `./build-release`.
+Debug build is generated in the `./app/build` directory relative to project (repo) root.
+Release build is generated in `./app/build-release`.
 
 On Linux, you will also need to build the `fem` executable (since the one that's committed to this repo was build on Mac):
 
 ```shell
 $ sudo apt install gfortran
-$ ./build.sh
+$ ./script/Build
 ```
 
 To run the freshly built application:
 
 ```sh
-# The pplication assumes it's being run from the build directory when locating its resource files.
-$ cd build # or build-release
+# The application assumes it's being run from the build directory when locating its resource files.
+$ cd app/build # or build-release
 $ ./mesh2audio
 ```
 
