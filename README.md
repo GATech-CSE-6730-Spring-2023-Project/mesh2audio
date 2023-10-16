@@ -1,5 +1,7 @@
 # mesh2audio
 
+_This project continues to be developed [here](https://github.com/khiner/mesh2audio)._
+
 Generate axisymmetric 3D models, or import existing 3D models, and transform them into real-time playable physical audio models!
 
 Supports fast DSP generation of physical audio models that sound decently realistic, as well as blazing fast 2D axisymmetric model generation, at the expense of some fidelity.
